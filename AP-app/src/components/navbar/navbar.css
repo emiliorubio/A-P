@@ -95,67 +95,76 @@ a {
 
 .navbar-form {
     position: relative;
-    right:0px;
-    top:0px;
+    right: 0px;
+    top: 0px;
 }
-.iconSearch{
+
+.iconSearch {
     height: 10px;
     width: 10px;
 }
+
 .navbar-form .form-control[type=text] {
     background: white;
-    display:inline-block;
+    display: inline-block;
     transition: all .5s;
 }
+
 .navbar-form .form-control[type=text]:focus {
     background-color: #fff;
     border-color: #729fcf;
-    color:#333;
-    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
-    box-shadow: 0 0 5px rgba(109,207,246,.5);
+    color: #333;
+    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
 }
 
 @media (min-width:1200px) {
-    .navbar-form input.form-control[type=text] { width: 160px; }
-    .navbar-form input.form-control[type=text]:focus { width: 350px; }
+    .navbar-form input.form-control[type=text] {
+        width: 160px;
+    }
+
+    .navbar-form input.form-control[type=text]:focus {
+        width: 350px;
+    }
 }
 
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .nav_toggler {
         display: block;
+        cursor: pointer;
     }
 
     .nav_menu {
-        position: fixed;
+        position: absolute;
         top: 7vh;
         right: 0;
-        width: 50%;
         height: 93vh;
-        background: rgb(0, 28, 73);
+        width: 50vw;
+        background: #24262b;
         flex-direction: column;
         transform: translateX(100%);
         transition: 0.5s ease-in;
     }
 }
 
-/* Nav Active Class*/
+/* Active Class */
 .nav_active {
-    transform: translateX(0);
+    transform: translateX(0%);
 }
 
-/* Toggler Icon Animation */
+/* Toggle Icon Animation */
 
-.toggle.line1 {
-    transform: rotate(-45deg) translate(-4, 5px);
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
 }
 
-.toggle.line2 {
+.toggle .line2 {
     opacity: 0;
 }
 
-.toggle.line3 {
-    transform: rotate(45deg) translate(-4, -5px);
+.toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
 }

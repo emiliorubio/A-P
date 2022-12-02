@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import "../navbar/navbar.css"
-import logoCarrito from "../img/logoCarrito.png"
-import Buscador from "../img/Buscador.png"
+import "./navbar.css"
+import logoCarrito from '../../assets/img/logoCarrito.png'
+import Buscador from '../../assets/img/Buscador.png'
 
 function Navbar () {
     const [active, setActive] = useState("nav_menu");
@@ -9,15 +9,15 @@ function Navbar () {
 
     
     const navToggle = () => {
-            active === 'nav_menu'
-                ? setActive("nav_menu nav_active")
-                : setActive("nav_menu");
+            if (active === "nav_menu"){
+                setActive("nav_menu nav_active");
+            } else  setActive("nav_menu");
     
             // TogglerIcon
 
-            toggleIcon === "nav_toggler"
-            ? setToggleIcon("nav_toggler toggle")
-            : setToggleIcon("nav_toggler");
+            if (toggleIcon === "nav_toggler") {
+                setToggleIcon("nav_toggler toggle");
+            } else setToggleIcon("nav_toggler");
     };
 
     return (
